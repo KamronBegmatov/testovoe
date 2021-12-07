@@ -14,6 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::post('perform_transaction', 'TransactionController@performTransaction');
+Route::post('get_information', 'TransactionController@getInformation');
+
+Route::post('get_information_user', 'UserController@getInformation');
+
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
